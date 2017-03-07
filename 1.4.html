@@ -11,11 +11,11 @@
  <div><label>Name: <input type="text" autofocus required placeholder="your name" name="Name"></label></div>
 <div><label>Password<input type="password" required placeholder="your password" pattern="[a-z]*" 
 title="only small letters" name="Password"></label></div>
- <div><label>Description<input type="textarea" placeholder="your description" name="Description"></label></div><br>
+ <div><label>Description <textarea placeholder="your description" name="Description"></textarea></label></div><br>
   <div><label>Accept agreement?<input type="checkbox" name="Agree?"> </label></div>
  <div><label>Like agreement?<input type="radio" name="Likes?"></label></div>
  <div><input type="reset"></div>
- <div><input type="button" value="Press this"</div><br>
+ <div><input type="button" value="Press this" ></div><br>
 <select name="Programming">
   <optgroup label="Platform">
     <option value="windows">Windows</option>
@@ -45,8 +45,11 @@ title="only small letters" name="Password"></label></div>
   <option value="Cloudy">
 </datalist>
 <input type="submit" value="Submit">
-<div><input type="image" src="tumme.png"></div>
 </fieldset> 
+</form>
+<form method="post" enctype="multipart/form-data" action="https://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.2/perl/example.cgi">
+    <input type="file" name="file">
+    <div><input type="image" src="tumme.png" alt="Submit"></div>
 </form>
 </body>
 </html>
