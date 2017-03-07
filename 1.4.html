@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>1.4 Form</title>
+</head>
+<body>
+<form action="https://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.1/perl/example.cgi" method="get">
+<fieldset>
+ <legend>Form</legend>
+ <div><label>Name: <input type="text" autofocus required placeholder="your name" name="Name"></label></div>
+<div><label>Password<input type="password" required placeholder="your password" pattern="[a-z]*" 
+title="only small letters" name="Password"></label></div>
+ <div><label>Description<input type="textarea" placeholder="your description" name="Description"></label></div><br>
+  <div><label>Accept agreement?<input type="checkbox" name="Agree?"> </label></div>
+ <div><label>Like agreement?<input type="radio" name="Likes?"></label></div>
+ <div><input type="reset"></div>
+ <div><input type="button" value="Press this"</div><br>
+<select name="Programming">
+  <optgroup label="Platform">
+    <option value="windows">Windows</option>
+    <option value="unix">Unix</option>
+  </optgroup>
+  <optgroup label="Programming language">
+    <option value="java">Java</option>
+    <option value="c#">C#</option>
+  </optgroup>
+</select><br>
+<input type="email" placeholder="Mail" name="Mail">
+<input type="url" placeholder="Webpage" name="Webpage">
+<input type="number" min="0" max="100" step="5" name="Number">
+<input type="range" min="0" max="15" step="5" name="Second number">
+<input type="datetime-local" name="Datetime">
+<input type="date" name="Date">
+<input type="month" name="Month">
+<input type="week" name="Week">
+<input type="time" name="Time">
+<br>
+<input list="vader" placeholder="Choose your favourite" name="Weather">
+<datalist id="vader">
+  <option value="Sun">
+  <option value="Rain">
+  <option value="Snow">
+  <option value="Windy">
+  <option value="Cloudy">
+</datalist>
+<input type="submit" value="Submit">
+<div><input type="image" src="tumme.png"></div>
+</fieldset> 
+</form>
+</body>
+</html>
