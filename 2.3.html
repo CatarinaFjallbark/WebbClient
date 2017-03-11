@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Marginaler, kantlinjer och paddning</title>
+  <style>
+    body {
+      padding: 25px;
+    }
+    p {
+       margin: 10px 15px 10px 8px;
+      }
+    p.solid {
+      border-style: solid;
+      border-width: 5px;
+      border-color: red;
+      outline: 5px dotted deeppink;
+      }
+    p.hidden {
+      visibility: hidden;
+      }
+    clip {
+      clip-path: polygon(0 100%, 0 0, 100% 0, 80% 100%);
+
+    }
+      
+  </style>
+</head>
+<body>
+<h1>Marginaler, kantlinjer och paddning</h1>
+<h3>Boxmodell</h3>
+<p>I CSS så används boxmodellen för att beskriva designlayouten.</p>
+<h4>innehåll</h4>
+<p>I innehållet (content) är var text/bilder dyker upp.</p>
+<h4>paddning</h4>
+<p>Paddningen är genomskilning och skapar ett mellanrum runt innehållet. Bodyn i detta dokumentet är paddat 25pixlar.</p>
+<h4>kantlinje</h4>
+<p>Kantlinje (boarder) är en kantlinje som går utanför paddningen.</p>
+<h4>marginal</h4>
+<p>Som paddning fast utanför kantlinjen. "margin" används på denna sidan, första avgör top sen höger, ner och vänster. Används margin med färre, exempelvis en, så gäller det alla håll. </p>
+<br>
+<h3>Borders</h3>
+<h4>border-color</h4>
+<p>Färgen på den solida boarden nedan är satt till rött.</p>
+<h4> border-style</h4>
+<p class="solid">Detta är ett exempel på boarderstyle.</p>
+<h4>border-width</h4>
+<p>Bredden på den solida boarden ovan är ökad till 5 pixlar. </p>
+<h4>outline</h4>
+<p>Jag valde outline på den solida linjen ovan till prickad och rosa.</p>
+<br>
+<h3>Synlighet</h3>
+<h4>visibility</h4>
+<p>Med visibilitytaggen kan man bestämma om paragraf ska vara synlig eller ej.</p>
+<p class="hidden">Denna paragraf är gömd. </p>
+<h4>clip-path</h4>
+<p></p>
+<img class="clip" src="tumme.png">
+<h4>display</h4>
+<p></p>
+<h4>overflow</h4>
+<p></p>
+<br>
+<h3>Box</h3>
+<p></p>
+Som är transparant till en viss grad (se rgba och opacity)
+Som har rundade hörn (se border-radius)
+Som har multippla bakgrundsbilder
+Som har skuggor (se box-shadow)
+Som har gradienter (se linear-gradient och radial-gradient)
+<br>
+</body>
+</html>
