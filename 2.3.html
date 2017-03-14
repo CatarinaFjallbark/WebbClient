@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
   <meta charset="UTF-8">
   <title>Marginaler, kantlinjer och paddning</title>
@@ -19,55 +19,70 @@
     p.hidden {
       visibility: hidden;
       }
-    clip {
-      clip-path: polygon(0 100%, 0 0, 100% 0, 80% 100%);
-
+    #clip {
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      } 
+    #displayblock {
+      display:block;
     }
-      
+    #scroll {
+      background: rgba(0, 0, 255, 0.2);
+      width: 100px;
+      height: 100px;
+      overflow: scroll;
+    }
+    #main {
+    /*  background-color: rgba(0, 0, 255, 0.2);*/
+      background: linear-gradient(red, deeppink);
+      border-style: solid;
+      border-width: 5px;
+      border-color: red;
+      outline: 5px dotted deeppink;
+      box-shadow: 10px 10px 10px 10px lightslategray;
+      padding: 25px;
+    }
   </style>
 </head>
 <body>
-<h1>Marginaler, kantlinjer och paddning</h1>
-<h3>Boxmodell</h3>
-<p>I CSS så används boxmodellen för att beskriva designlayouten.</p>
-<h4>innehåll</h4>
-<p>I innehållet (content) är var text/bilder dyker upp.</p>
-<h4>paddning</h4>
-<p>Paddningen är genomskilning och skapar ett mellanrum runt innehållet. Bodyn i detta dokumentet är paddat 25pixlar.</p>
-<h4>kantlinje</h4>
-<p>Kantlinje (boarder) är en kantlinje som går utanför paddningen.</p>
-<h4>marginal</h4>
-<p>Som paddning fast utanför kantlinjen. "margin" används på denna sidan, första avgör top sen höger, ner och vänster. Används margin med färre, exempelvis en, så gäller det alla håll. </p>
-<br>
-<h3>Borders</h3>
-<h4>border-color</h4>
-<p>Färgen på den solida boarden nedan är satt till rött.</p>
-<h4> border-style</h4>
-<p class="solid">Detta är ett exempel på boarderstyle.</p>
-<h4>border-width</h4>
-<p>Bredden på den solida boarden ovan är ökad till 5 pixlar. </p>
-<h4>outline</h4>
-<p>Jag valde outline på den solida linjen ovan till prickad och rosa.</p>
-<br>
-<h3>Synlighet</h3>
-<h4>visibility</h4>
-<p>Med visibilitytaggen kan man bestämma om paragraf ska vara synlig eller ej.</p>
-<p class="hidden">Denna paragraf är gömd. </p>
-<h4>clip-path</h4>
-<p></p>
-<img class="clip" src="tumme.png">
-<h4>display</h4>
-<p></p>
-<h4>overflow</h4>
-<p></p>
-<br>
-<h3>Box</h3>
-<p></p>
-Som är transparant till en viss grad (se rgba och opacity)
-Som har rundade hörn (se border-radius)
-Som har multippla bakgrundsbilder
-Som har skuggor (se box-shadow)
-Som har gradienter (se linear-gradient och radial-gradient)
-<br>
+<div id="main">
+  <h1>Marginaler, kantlinjer och paddning</h1>
+  <h3>Boxmodell</h3>
+    <p>I CSS så används boxmodellen för att beskriva designlayouten.</p>
+  <h4>innehåll</h4>
+    <p>I innehållet (content) är var text/bilder dyker upp.</p>
+  <h4>paddning</h4>
+    <p>Paddningen är genomskilning och skapar ett mellanrum runt innehållet. Bodyn i detta dokumentet är paddat 25pixlar.</p>
+  <h4>kantlinje</h4>
+    <p>Kantlinje (boarder) är en kantlinje som går utanför paddningen.</p>
+  <h4>marginal</h4>
+    <p>Som paddning fast utanför kantlinjen. "margin" används på denna sidan, första avgör top sen höger, ner och vänster. Används margin med färre, exempelvis en, så gäller det alla håll. </p>
+  <br>
+  <h3>Borders</h3>
+  <h4>border-color</h4>
+    <p>Färgen på den solida boarden nedan är satt till rött.</p>
+  <h4> border-style</h4>
+    <p class="solid">Detta är ett exempel på boarderstyle.</p>
+  <h4>border-width</h4>
+    <p>Bredden på den solida boarden ovan är ökad till 5 pixlar. </p>
+  <h4>outline</h4>
+    <p>Jag valde outline på den solida linjen ovan till prickad och rosa.</p>
+  <br>
+  <h3>Synlighet</h3>
+  <h4>visibility</h4>
+    <p>Med visibilitytaggen kan man bestämma om paragraf ska vara synlig eller ej.</p>
+    <p class="hidden">Denna paragraf är gömd. </p>
+  <h4>clip-path</h4>
+    <p>Med denna taggen går det att klippa ut delar av bilden. I CSSen skriver man (i mitt fall valde jag basic shape som polygon): clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) där det första är x och y för översta och så vidare.</p>
+  <img id="clip" src="tumme.png" alt="Bild av tumme">
+  <img id="displayblock" src="tumme.png" alt="Bild av tumme">
+  <h4>display</h4>
+    <p>Bestämmer om och hur ett element ska användas. Till exempel en &lt;html&gt;-tagg är blocknivå medan en &lt;img&gt;-tagg är inline vilket innebär att den inte tar upp hela raden tillskillnad från blocknivån. Jag väljer att använda display block på den andra bilden ovan för att lägga den på en egen rad.</p>
+  <h4>overflow</h4>
+    <p id="scroll">Denna bestämmer vad som ska hända med det som inte får plats i speciferade området. Overflow gäller bara blockelement med viss höjd. I detta fallet använder jag scroll.</p>
+  <br>
+  <h3>Box</h3>
+    <p>Under punkten overflov använder jag rgba med blå genomskinlig bakgrund. Hörnen i &lt;div&gt;-taggen är rundade med border-radius och skugga används. Bakgrunden är gjord med an linjär gradiendt,linear-gradient.</p>
+  <br>
+</div>
 </body>
 </html>
