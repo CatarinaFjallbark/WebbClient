@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bilder och bakgrundsbilder</title>
+  <style>
+    body, h1 {
+        background: url("./tumme.png"); 
+        color: darkslategrey;
+        padding: 10px;
+    }
+    h1 {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+    }
+    #text1 {
+        background: lightgreen;
+        padding: 20px; 
+    }
+   ul {
+        list-style: square inside url("tumme.png");
+   }
+   img {
+        float: left;
+        padding-right: 20px;
+        opacity: 0.5;
+    }
+    #clear {
+        clear: both;
+    }
+  </style>
+</head>
+<body>
+    <div id="text1">
+        <h1>Bilder och bakgrundsbilder</h1>
+        <h3>background</h3>
+            <p>Bakgrunden kan ändras med "background" i bodyn. I detta fallet sätts bakgrunden till en bild på en tumme. Jag har även satt samma bakgrund på h1-taggen.</p>
+        <ul>
+            <li>här har jag satt bild på listelementen.</li>
+            <li>detta är ett exempel på det.</li>
+        </ul>
+        <br><br>
+        <h3>img-taggen</h3>
+        <img src="tumme.png" alt="Bild på tumme">
+            <p>Bild-taggen används med src som är länk till bilden, alt är det som ska läsas upp för skärmläsare, höjd och bredd kan också defineras. I CSS så kan man sätta regler för bilden till exempel att den ska vara både genomskinlig som bilden till vänster och jag har också via css filter på vilden i h1 lagt en gråskala-filter över den.  </p>
+            <p id="clear">Med hjälp av clear så flyttar jag ner denna raden till ny rad.</p>
+    </div>
+</body>
+</html>
