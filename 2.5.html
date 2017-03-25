@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Navigation</title>
+<style>
+    body {
+         line-height: 150px;
+        background-color: #6380a8;
+        }
+    div#foot {
+        background-color: #013668; 
+        color:white;
+        text-align: center;
+    }
+    div#nav {
+        line-height: 105px;
+        background-color: #013668; 
+    }
+    a:link {
+        text-decoration: none;
+        width: 120px;
+    }
+    a:visited {
+        color: gray;
+    }
+    a:active {
+        color: red;
+    }
+    a#mail {
+        color: #ffffff;
+        background-color: #013668;
+        margin: 20px;
+        padding: 20px;
+        display: inline-block;
+        text-align: center;
+        line-height: 15px;
+    }
+    a#mail:hover {
+        background-color: #6380a8 ; 
+    }
+    .navbutton {
+        color: #ffffff;
+        font-size: 16px;
+        text-align: center;
+        display: inline-block;
+    }
+    .navbutton:hover {
+        background-color:#6380a8;
+    }
+    .navbutton:active {
+        background-color: #6380a8;
+    }
+    #cursor {
+        cursor:wait;
+    }
+</style>
+</head>
+<body>
+    <div id="nav">
+        <center>
+        <a href="#nav" class="navbutton">HOME</a>
+        <a href="#mail" class="navbutton">MAIL</a>
+        <a href="#foot" class="navbutton">GRAFIKLÄNK</a>
+        </center>
+    </div>
+    <div>
+        <h2>a:link</h2>
+        <p>Denna taggen kan styra a-taggen, jag har valt att sätta bredden här.</p>
+        <h2>Länk i form av knapp</h2>
+        <center><a id="mail" href="mailto:a.b@mail.com?Subject=Hello" target="_top">SEND MAIL</a></center>
+        <h2>a:active</h2>
+        <p>Denna taggen styr elementet när den trycks ner, i mitt fall valde jag färgen rött.</p>
+        <h2>a:hover</h2>
+        <p>Styr elementt när användaren hovrar över med musen.</p>
+        <h2>a:visited</h2>
+        <p>Har du varit inne på sidan så går det att reglera exempelvis färgen på länken, i mitt fall ändrar jag färgen till grå. </p>
+        <h2>Cursor</h2>
+        <p>Styr pekaren på elementet, se exempel nedan:</p>
+        <span id="cursor">Wait</span>
+    </div>
+    <div id="foot">
+        <p>Länk med grafik i form av en tumme.</p>
+        <a href="mailto:a.b@mail.com?Subject=Hello">
+         <img src="tumme.png" alt="Tumme"/>
+        </a>
+    </div>
+</body>
+</html>
