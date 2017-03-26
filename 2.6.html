@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tabeller och formulär</title>
+<style>
+table {
+    width: 500px;
+} 
+table#fixed {
+    table-layout: fixed;
+}
+input[type=text], select {
+    width: 100px;
+    padding: 20px 20px;
+    margin: 50px;
+}
+
+input[type=submit] {
+    background-color: limegreen;
+    color: white;
+    padding: 20px 20px;
+    margin: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+<h2>table-layout:auto</h2>
+<p>Sätter tabellbredden till bredaste möjliga. </p>
+<table>
+  <tr>
+    <td>aaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
+    <td>bbbbbbb</td>
+  </tr>
+</table>   
+<h2>table-layout:fixed</h2>
+<p>Bredden anpassas ej efter innehåller</p>
+<table id="fixed">
+  <tr>
+    <td>aaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
+    <td>bbbbbbb</td>
+  </tr>
+</table>  
+<h2>Css med formulär</h2>
+<p>Formulär kan snyggas till ordentligt med css, bredden kan styras, padding, marginaler, bordern, färger,</p>
+<div>
+  <form>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
